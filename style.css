@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI light';
     margin: 0;
     padding: 0;
 }
@@ -9,8 +9,23 @@
     --main-color:#7E69C6;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;;
 }
+
+/* I'm comment this because not like the main desgin */
+/* .container{
+    padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  
+} */
+
+
+
+
+
+
 
 /* navbar */
 nav{
@@ -23,7 +38,11 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 50px;
+    /* padding: 5px 50px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 nav .logo{
@@ -47,21 +66,24 @@ ul{
 li{
     list-style-type: none;
 }
-
+a:hover, a::after{
+    color: tomato;
+    transition: 1s ease-out;
+    border-bottom: 5px solid tomato;
+}
 a{
     text-decoration: none;
     font-size: 20px;
-
+    transition: .5s;
     color: var(--text-color);
-
-}
+ }
 /* </navbar> */
 
 
 /* section one */
 .header{
     background-color: var(--main-color);
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -93,6 +115,7 @@ a{
     padding-left: 100px;
     color: var(--text-color);
     padding-right: 80px;
+    padding-top: 20%;
 }
 .captions h2{
     font-size: 52px;
@@ -282,7 +305,6 @@ a{
 }
 .mobile-caption button{
    background-color: #4868db;
- 
    margin-top: 40px;
    margin-left: 0px;
   font-size: 18px;
@@ -312,26 +334,6 @@ a{
 /* </mobile section>  */
 
 
-/* .Our-Video{
-    background-color: yellowgreen;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Our-Video .our-video-caption{
-
-    width: 100%;
-    height: 100vh;
-}
-
-.Our-Video .our-video-caption video{
-    
-    width: 100%;
-    height: 410px;
- 
- } */
 
 
  /* captions section */
@@ -346,20 +348,33 @@ a{
     align-content: center;
     margin: 100px auto;
     flex-wrap: wrap;
-
+ 
  }
+ 
 
  .captions-section .caption h4{
     font-size: 25px;
  }
  .captions-section .caption{
-    margin: 20px auto;
+    margin: 0px auto;
     width: calc(90% / 3);
-    padding: 30px;
+     padding: 30px;
     text-align: start;
     color: #606060;
     font-size: 18px;
+   }
+  .captions-section .caption .inner *i{
+    width: 60px;
+    height: 60px;
   }
+  .captions-section .caption{
+    border-radius: 20px;
+  }
+.inner i:hover{
+    color: #4868db !important;
+     
+}
+ 
 
    /* </captions section> */
 
@@ -369,19 +384,22 @@ a{
     position: fixed;
     background-color: white;
     z-index: 999999999;
-    border-radius: 2px;
+    border-radius: 25%;
     left: 0;
     top: 200px;
     width: 50px;
     height: 100px;
-  }
+
+}
   .setting button{
     border: none;
     height: 50%;
-    margin: auto;
+     border-radius:  25% ;
   }
   .setting button i:hover{
-    color: #4868db;
+    /* color: #4868db; */
+    color: var(--main-color);
+
   }
   .setting i{
     align-content: center;
@@ -419,13 +437,13 @@ a{
 }
 .analysis .info .info-div{
     width: calc(100%/4);
-  
-
+ 
 }
 .analysis .info .info-div i{
     font-size: 50px;
     color: #F8F8F8;
-}
+
+    }
 .analysis .info .info-div .number , .location , .ideas ,.comments{
      width: 100%;
     height: 100%;
@@ -527,6 +545,9 @@ a{
     color: #F8F8F8;
 
 }
+.info-div i:hover{
+    color: #303030 !important;
+}
 
 /* footer */
 .footer{
@@ -569,6 +590,7 @@ border-radius: 50%;
 }
 .footer .icons .one:hover{
     background-color: #4868db;
+
 }
 
 .footer .icons .two:hover{
@@ -581,4 +603,257 @@ border-radius: 50%;
 
 .footer .icons .four:hover{
     background-color: #00aced !important;
+}
+/* end footer */
+
+/* start info section */
+.info-section{
+    width: 90%;
+    height: 50vh;
+    margin:50px auto;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.info-section .info-columns{
+    margin: 20px;
+    width: calc(100%/5);
+}
+.info-section .info-columns p ,h3{
+    padding: 10px;
+}
+
+
+ /* responsive tablet  */
+ @media screen and (max-width:500px) {
+   
+    nav .logo{
+        position: fixed;
+        top: 5px;
+    }
+  .menu-bar{
+        position: fixed;
+        right: 0;
+        top: 0;
+        margin-top: 1px;
+        width: 30px;
+        height: 30px;
+        /* background-color: #f4f4f4; */
+        position: absolute;
+        right: 20px;
+        cursor: pointer;
+        display: inline-block;
+        z-index: 99999999999999999999;
+        }
+    nav .div-one ,nav .div-two ,nav .div-three{
+        width: 30px;
+        height: 5px;
+        /* background-color: #333; */
+        background-color: #f4f4f4;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+   
+    .lists:hover ul{
+        display: block;
+        position: relative;
+        top: 20px;
+        background-color: #f4f4f4;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        column-count: 1;
+        column-gap: 5px;
+        z-index: 99556598; 
+        color: black;
+    }
+
+ .lists ul li{
+    display: block;
+    padding: 10px;
+
+ }
+ .lists ul li a{
+    text-decoration: none;
+    color: #00aced;
+ }
+
+.lists ul{
+    display: none;
+}
+
+    .header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         flex-direction: column;
+        margin: auto;
+       }
+       .header .iphone{
+         width: 100%;
+        padding-top: 80px;
+        justify-content: center;
+        align-items: center;
+     }
+     
+       .header .captions{
+        padding-top: 0px;
+        width: 500px;
+        display: block;
+        justify-self: center;
+        align-items: center;
+       }
+       .header .captions button{
+        display: flex;
+        justify-content: center;
+         align-content: center;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+       }
+
+        .color{
+        display: none;
+     }
+    /* </header> */
+    
+   /* laptop */
+   .laptop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 300px;
+    }
+    .laptop .laptop-caption{
+        width:300px;
+    }
+   .laptop-img img{
+     width: 150%;
+     padding-right:50px;
+     transition: .5s;
+     transition-delay: .2s;
+
+    }
+    .laptop-img img:hover{
+        transform: scale(1.2);
+        transition: .5s;
+    }
+    /* </laptop> */
+
+/* tablet */
+    .tablet{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 350px;
+     }
+     .tablet .tablet-img{
+        width: 350px; 
+      text-align: center;
+        margin: auto;
+     }
+     .tablet .tablet-img img{
+        width: 100%;
+     }
+     .tablet .tablet-caption{
+        width: 300px;
+        text-align: center;
+     }
+   .color-two{
+    display: none;
+    }
+
+/* </tablet> */
+   .mobile{
+      margin: auto;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: start;
+     align-items: start;
+     width: 100%;
+     position: relative;
+    } 
+
+   .mobile .mobile-caption{
+         flex-wrap: wrap;
+        width: 300px;
+        margin-left: 20px;
+    }
+   .mobile .mobile-img{
+        width:300px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+         position: absolute;
+         bottom: 0;
+        left: 0;
+        right: 0;
+        }
+  .mobile-img img{
+     width:300px;
+  }   
+/* </mobile> */
+
+/* captions-section */
+.captions-section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+.captions-section .caption{
+    width: 100%;
+  
+}
+/* </captions-section> */
+
+
+/* analysis */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+/* analysis */
+.analysis{
+  }
+.analysis .info{
+    width: 500px;
+    height: 800px;
+    margin-right: 200px;
+}
+.analysis .info .info-div{
+     text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid #888;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+
+/* info-section */
+.info-section{
+    display: grid;
+ }
+
+ /* footer */
+ .footer{
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 }
