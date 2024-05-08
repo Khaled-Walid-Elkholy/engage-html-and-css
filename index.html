@@ -7,13 +7,13 @@
 
     <title>Document</title>
 
-    <link rel="stylesheet" href="all.min.css">    
+    <link rel="stylesheet" href="all.min.css">  
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  
  <div class="site">
-
     <nav>
         <div class="logo">
             <img src="./Engage App _ Just another Engage Theme Demos site/logo-light.png" alt="">
@@ -53,9 +53,13 @@
         </div>    
     </section>
     <div class="color"></div>
+    <section id="loading" >
+        <i class="spinner fas fa-spin fa-cog fa-3x"></i>   
+    </section>
     <!-- laptop  -->
     <section class="laptop" id="Feature">
-        <div class="laptop-caption">
+        <div class="laptop-body">
+              <div class="laptop-caption">
                 <h3>What is MyApp?</h3>
                 <p>Nunc id ante quis tellus faucibus dictum in eget metus. Duis suscipit elit sem, sed mattis tellus accumsan eget. Quisque consequat venenatis rutrum.</p>
 
@@ -64,20 +68,27 @@
         <div class="laptop-img">
             <img src="Engage App _ Just another Engage Theme Demos site/laptop-floating-600x610.png" alt="">
         </div>
+        </div>
+      
     </section>
     <section class="tablet" id="Pricing">
-        
-        <div class="tablet-img">
-            <img src="Engage App _ Just another Engage Theme Demos site/ipad-with-cover-2.png" alt="">
-        </div>
-        <div class="tablet-caption">
-            <h2>Learn about us</h2>
-            <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on projects big and small from small residential extensions to full house and commercial builds and we are registered NHBC house builders.            </p>    
-        
-            <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.            </p>
+        <div class="tablet-body">
+            <div class="tablet-img">
+                <img src="Engage App _ Just another Engage Theme Demos site/ipad-with-cover-2.png" alt="">
+            </div>
+            <div class="tablet-caption">
+                <h2>Learn about us</h2>
+                <p>We have been operating for over 30 years and are Members of The Federation of Master Builders. We work on
+                    projects big and small from small residential extensions to full house and commercial builds and we are
+                    registered NHBC house builders. </p>
+                <p>I am text block. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. </p>
+            </div>
         </div>
     </section>
+
     <div class="color-two"></div>
+
     <section class="mobile" id="Blog">
         <div class="mobile-caption">
                 <h3>What is MyApp?</h3>
@@ -89,6 +100,7 @@
             <img src="Engage App _ Just another Engage Theme Demos site/iphone-black-397x800.png" alt="">
         </div>
     </section>
+    
     <section class="captions-section">
         <div class="caption">
             <div class="inner">
@@ -237,7 +249,11 @@
             </div>
         </div>
     </footer>
-</div>
+    <div class="arrow" id="arrow">
+        <i class="fa-solid fa-arrow-up" style="color: #eee;"></i>    </div>
 
+</div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
